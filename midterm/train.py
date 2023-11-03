@@ -19,8 +19,8 @@ from xgboost import XGBClassifier
 n_estimators = 600
 max_depth = 6
 
-df = pd.read_csv("midterm/smoker_train_dataset.csv")
-pg = pd.read_csv("midterm/train.csv")
+df = pd.read_csv('midterm\smoker_train_dataset.csv')
+pg = pd.read_csv('midterm\\train.csv')
 
 df = pd.concat([pg, df])
 
@@ -61,9 +61,13 @@ y_pred = xgb_model.predict(df_test)
 roc = metrics.roc_auc_score(y_test, y_pred_prob)
 acc = metrics.accuracy_score(y_test, y_pred)
 
-output_file = f'midterm/model_xgboost.bin'
+output_file = f'./model_xgboost.bin'
 
 with open(output_file,'wb') as f_out:
     pkl.dump(xgb_model,f_out)
     
 print("----- Model Exported -----")
+
+test = full_train.tail(1).values
+test_pred = xgb_model.predict(test)
+print(test_pred)
