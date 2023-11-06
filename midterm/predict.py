@@ -5,7 +5,7 @@ from flask import jsonify
 import numpy as np
 
 
-model_file = './model_xgboost.bin'
+model_file = "model_xgboost.bin"
 
 with open(model_file, 'rb') as f_in:
     model = pkl.load(f_in)
@@ -29,3 +29,8 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=9696)
+
+
+# waitress-serve --listen=0.0.0.0:9696 predict:app
+# docker build -t [containerName] .
+# docker run -it --rm -p 9696:9696 [containerName]
