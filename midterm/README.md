@@ -187,6 +187,12 @@ Our machine learning application has been containerized for easy deployment usin
    - -p 9696:9696 maps port 9696 on your host to port 9696 within the container.
    - [containerName] is the name you provided when building the container.
 
+2. Then, you can run the project with the following command:
+
+    ```bash
+    python predict-test.py
+    ```
+
 Your machine learning application is now running within the Docker container, and you can access it at `http://localhost:9696`.
 
 ### Dockerfile
@@ -212,3 +218,27 @@ ENTRYPOINT [ "waitress-serve","--listen=0.0.0.0:9696","predict:app" ]
 ```
 
 This Dockerfile sets up a Python environment, installs dependencies, and exposes port 9696 to run your Flask application using Waitress. The `ENTRYPOINT` specifies how to start the application.
+
+## Sample output
+
+Locally, user shoud be able to get a similar output to the one shown below upon running all steps successfully.
+
+!["terminal sample output"](sample_output.png)
+
+Sample data used in predict-test.py
+
+```python
+test = {
+    "age": 40, "height(cm)": 175,
+    "weight(kg)": 85, "waist(cm)": 88,
+    "eyesight(left)": 1.2, "eyesight(right)": 1,
+    "hearing(left)": 1, "hearing(right)": 1,
+    "systolic": 100, "relaxation": 70,
+    "fasting blood sugar": 112, "Cholesterol": 295,
+    "triglyceride": 184, "HDL": 51,
+    "LDL": 209, "hemoglobin": 15.2,
+    "Urine protein": 1, "serum creatinine": 0.9,
+    "AST": 17, "ALT": 13, "Gtp": 55,
+    "dental caries": 0
+}
+```

@@ -1,6 +1,7 @@
 import requests
 url = 'http://127.0.0.1:9696/predict'
 
+
 test = {
     "age": 40, "height(cm)": 175,
     "weight(kg)": 85, "waist(cm)": 88,
@@ -12,8 +13,7 @@ test = {
     "LDL": 209, "hemoglobin": 15.2,
     "Urine protein": 1, "serum creatinine": 0.9,
     "AST": 17, "ALT": 13, "Gtp": 55,
-    "dental caries": 0,
-    "bmi": 27.75510204
+    "dental caries": 0
 }
 
 try:
