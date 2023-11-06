@@ -2,13 +2,13 @@
 
 ## Problem description
 
-The following dataset was used for this project: https://www.kaggle.com/competitions/playground-series-s3e24/data 
+The following dataset was used for this project: <https://www.kaggle.com/competitions/playground-series-s3e24/data>
 
-Merged with the original dataset: https://www.kaggle.com/datasets/gauravduttakiit/smoker-status-prediction-using-biosignals/data
+Merged with the original dataset: <https://www.kaggle.com/datasets/gauravduttakiit/smoker-status-prediction-using-biosignals/data>
 
 A group of scientists are working on predictive models with smoking status as the prediction target. The task is to help them create a machine learning model to identify the smoking status of an individual using bio-signals
 
-Dataset Features: 
+Dataset Features:
 
 - `id`: Unique identifier for each data point.
 - `age`: Age of the individual, categorized in 5-year intervals.
@@ -59,7 +59,6 @@ We conducted an Exploratory Data Analysis (EDA) to gain insights into our datase
     summary(df)
     ```
 
-
 - **Analysis of Target Variable**: We provided an analysis of the target variable 'smoking' using a count plot.
 
     ```python
@@ -85,7 +84,7 @@ We conducted an Exploratory Data Analysis (EDA) to gain insights into our datase
     plt.title('Correlation Matrix', fontsize=15)
     ```
 
-Some observations: 
+Some observations:
 
 - Since the correlation values between any two variables is not greater than 90%, none of the attributes were removed.
 
@@ -153,7 +152,7 @@ This command will create a virtual environment and install the required packages
     waitress-serve --listen=0.0.0.0:9696 predict:app
     ```
 
-Your Flask application will be accessible at http://localhost:9696.
+Your Flask application will be accessible at `http://localhost:9696`.
 
 Please ensure that you run this command within the activated virtual environment to use the correct dependencies.
 
