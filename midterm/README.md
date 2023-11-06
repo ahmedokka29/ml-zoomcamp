@@ -32,6 +32,8 @@ Dataset Features:
 - `Gtp`: Level of gamma-glutamyl transferase enzyme.
 - `dental caries`: Presence (1) or absence (0) of dental cavities.
 - `smoking`: Target variable indicating if the individual is a smoker (1) or not (0).
+  
+**All the datasets used in the project are provided and accessible within the repository.**
 
 ## EDA
 
