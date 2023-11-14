@@ -242,3 +242,16 @@ test = {
     "dental caries": 0
 }
 ```
+
+## Cloud Deployment
+
+1. We've integrated Render with our repository, enabling automatic builds and deployments. This ensures that your machine learning application is always up to date.
+
+   ![render logs screenshot](render.png)
+
+2. With Render, your application is accessible online through a provided URL. This makes it easy for users to interact with your machine learning solution without any complicated setup.
+
+3. You can test your deployed application using the provided URL `https://smoking-prediction.onrender.com/predict`, ensuring that it functions as expected in an online environment.
+4. To test it just run `predict-test-render.py`
+
+   ![render putput sample](output_render.png)
