@@ -1,2 +1,4 @@
 
 08_deep_learning/data.zip
+*.h5
+*.tflite
